@@ -36,7 +36,7 @@ Docker 可以毫无问题地使用 Buildah 构建的图像。它们不是“Buil
 尽管 Mattermost 已经提供了官方的 Docker 镜像，但由于我们更喜欢配置它的方式，也为了更容易运行 Mattermost 的短暂测试实例，我们不得不构建自己的镜像。我们还想预装某些 Mattermost 插件，这些插件是我们的导师所依赖的。所以我们采用了官方的 docker 文件，对其进行了一点修改，并将其输入到 Buildah:
 
 ```
-FROM alpine:3.9
+FROM alpine:3.22.1
 
 # Some ENV variables
 ENV PATH="/opt/mattermost/bin:${PATH}"
